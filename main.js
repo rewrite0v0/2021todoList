@@ -29,7 +29,6 @@ const removeTodo = () => {
     const finder = e.target;
     const removeTarget = finder.parentElement;
     if (finder.classList[0] === "todoDelete") {
-      // console.log(removeTarget);
       removeTarget.remove();
     } else {
       return 0;
@@ -43,13 +42,14 @@ const completeTodo = () => {
     const picker_on = finder.classList[0];
     const picker_off = finder.classList[1];
 
-    if (picker_on === "todo-item") {
-      finder.style.textDecorationLine = "line-through";
-      finder.classList.add("todoDone");
-    }
     if (picker_off === "todoDone") {
       finder.style.textDecorationLine = "none";
       finder.classList.remove("todoDone");
+    } else if (picker_on === "todo-item") {
+      finder.style.textDecorationLine = "line-through";
+      finder.classList.add("todoDone");
+    } else {
+      return 0;
     }
   });
 };
