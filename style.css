@@ -1,0 +1,19 @@
+:root {
+  display: flex;
+  justify-items: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+body {
+  font-family: sans-serif;
+  background-color: cornflowerblue;
+  color: #ffffff;
+}
+article {
+  justify-content: space-around;
+}
+
+.mainTodo {
+  list-style: none;
+}
